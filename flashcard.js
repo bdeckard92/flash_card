@@ -57,7 +57,7 @@ var askQuestion = function() {
             input.front,
             input.back);
 
-        //need to make newCard string before sending to json
+        //need to make newCard string before sending to json like var toString = stringify(newCard)
         newCard.printInfo();
         fs.writeFile("basic.json", "newCard", function(err, data) {
             if (err);
