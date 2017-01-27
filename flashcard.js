@@ -25,7 +25,7 @@ function ClozeCard(visible, invisible) {
     //and be separate from the flash card or close maker and then call the proper function based on response.
 
         if (this.val === true) {
-          
+
         }
 
 // function to prompt for and recieve input for card
@@ -57,14 +57,14 @@ var askQuestion = function() {
             input.front,
             input.back);
 
-
+        //need to make newCard string before sending to json
         newCard.printInfo();
         fs.writeFile("basic.json", "newCard", function(err, data) {
             if (err);
             console.log(err);
         });
 
-
+        //call function
         askQuestion();
     });
 }
